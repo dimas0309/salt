@@ -1,0 +1,54 @@
+/*#4e598c, #ffffff, #f9c784, #fcaf58, #ff8c42*/
+
+#header {
+	background-color: #fcaf58;
+}
+
+#headtext {
+	color: #4e598c;
+	font-weight: 500;
+}
+
+#navbar {
+	background-color: #ff8c42;
+}
+
+#home, #about, #menu, #contact {
+	font-weight: 500;
+	color: #4e598c;
+}
+
+#home:hover, #about:hover, #menu:hover, #contact:hover {
+	font-weight: 500;
+	color: #ffffff;
+}
+
+main {
+	width: 100%;
+	background-color: #4e598c;
+}
+
+h3 {
+	color: #ffffff;
+}
+
+p {
+	font-weight: 500;
+	color: #ffffff;
+}
+
+#card {
+	border-color: #4e598c;
+	background-color: #4e598c;
+}
+
+.mv-wtp {
+	width: 900px;
+	height: 400px;
+}
+
+footer {
+	font-weight: 500;
+	background-color: #f9c784;
+	color: #4e598c;
+}
