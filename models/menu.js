@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 menuSchema = new Schema ({
-	category: {
-		type: String,
-		required: true
-	},
+	
 	food: {
 		type: String,
 		required: true
@@ -16,6 +13,10 @@ menuSchema = new Schema ({
 	},
 	details: {
 		type: String
+	},
+	category: {
+		type: Schema.Types.ObjectId,
+		ref: 'Category'
 	}
 })
 
