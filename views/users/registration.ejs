@@ -1,0 +1,26 @@
+<% layout('layouts/template') %>
+
+<section class="d-flex justify-content-center mt-5 mb-5">
+    <div class="card" id="card" style="width: 15rem;">
+  <img src="/static/img/voter.png" alt="...">
+  <div class="card-body">
+     <form action="/users/register" method="POST">
+        <label for="username" id="username">Username</label>
+        <input class="form-control id="username" name="username" type="text" required>
+        <p></p>
+        <label for="password" id="password">Password</label>
+        <input class="form-control id="password" name="password" type="password" required>
+        <p></p>
+        <label for="email" id="email">Email</label>
+        <input class="form-control id="email" name="email" type="email" required>
+        <p></p>
+        <label for="role" id="role">Role</label>
+        <input class="form-control id="role" name="role" type="text" required>
+        <br>
+        <button class="btn" id="rgbtn">
+            REGISTER
+        </button>
+     </form>
+  </div>
+</div>
+</section>

@@ -13,12 +13,14 @@
 	background-color: #ff8c42;
 }
 
-#home, #about, #menu, #contact {
+#home, #about, #menu, #contact, #login, #register,
+#logout, #user {
 	font-weight: 500;
 	color: #4e598c;
 }
 
-#home:hover, #about:hover, #menu:hover, #contact:hover {
+#home:hover, #about:hover, #menu:hover, #contact:hover, 
+#login:hover, #register:hover, #logout:hover{
 	font-weight: 500;
 	color: #ffffff;
 }
@@ -28,7 +30,7 @@ main {
 	background-color: #4e598c;
 }
 
-h3 {
+h3, #username, #password, #email, #role {
 	color: #ffffff;
 }
 
@@ -40,6 +42,36 @@ p {
 #card {
 	border-color: #4e598c;
 	background-color: #4e598c;
+}
+
+#hr {
+	border: 5px solid #ffffff;
+}
+
+#lgbtn, #rgbtn {
+	font-weight: 500;
+	border-color: #ffffff;
+	background-color: #4e598c;
+	color: #ffffff;
+}
+
+#lgbtn:hover, #rgbtn:hover {
+	background-color: #ffffff;
+	color: #4e598c;
+}
+
+#success {
+	font-weight: 500;
+	color: #ffffff;
+}
+
+#error {
+	font-weight: 500;
+	color: #fcaf58;
+}
+
+li {
+	list-style: none;
 }
 
 .mv-wtp {

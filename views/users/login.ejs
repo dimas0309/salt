@@ -1,0 +1,19 @@
+<% layout('layouts/template') %>
+<section class="d-flex justify-content-center mt-5 mb-5">
+    <div class="card" id="card" style="width: 15rem;">
+  <img src="/static/img/user.png" alt="...">
+  <div class="card-body">
+     <form action="/users/login" method="POST">
+        <label for="username" id="username">Username</label>
+        <input class="form-control id="username" name="username" type="text" required>
+        <p></p>
+        <label for="password" id="password">Password</label>
+        <input class="form-control id="password" name="password" type="password" required>
+        <br>
+        <button class="btn" id="lgbtn">
+            LOGIN
+        </button>
+     </form>
+  </div>
+</div>
+</section>
