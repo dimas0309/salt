@@ -1,100 +1,122 @@
 <% layout('layouts/template') %>
 
-<div class="d-flex flex-wrap mt-5">
-    <ul>
-    <% for(let c of starter) { %>
-        <li>
-           <h3><%= c.name %></h3>
-        </li>
-        <hr id="hr">
-        <% for(let i = 0; i < c.dishes.length; i++) {%>
-            
-            <div class="card" id="card" style="width: 18rem;">
+ <div class="d-flex bd-highlight">
+  <div class="p-2 flex-fill bd-highlight">
+    <div class="d-flex flex-column bd-highlight">
+    <% for(item of starter) { %>
+       <h3><%= item.name %></h3>
+       <hr id="hr">
+       <div class="d-flex flex-wrap">
+        <% for(i = 0; i < item.dishes.length; i++) { %>
+           <div class="card" id="card" style="width: 15rem;">
                 <img src="https://images.unsplash.com/photo-1625938144755-652e08e359b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3RhcnRlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h3><%= c.dishes[i].food%></h3>
-                    <p><%= c.dishes[i].details%></p>
-                    <p><%= c.dishes[i].price%></p>      
-                </div>
-            </div>
-        <%}%>     
+                    <h5 class="foods"><%= item.dishes[i].food%></h5>
+                    <p><%= item.dishes[i].details%></p>
+                    <h5 class="prices text-center"><%= item.dishes[i].price%></h5>
+                    <%- include('../partials/order_buttons') %>
+               </div>
+           </div>
+        <% } %>
+       </div>
     <% } %>
-    </ul>
-    <ul>
-    <% for(let c of salad) { %>
-        <li>
-           <h3><%= c.name %></h3>
-        </li>
-        <hr id="hr">
-        <% for(let i = 0; i < c.dishes.length; i++) {%>
-            <div class="card" id="card" style="width: 18rem;">
+    </div>
+    <div class="d-flex flex-column bd-highlight">
+    <% for(item of salad) { %>
+       <h3><%= item.name %></h3>
+       <hr id="hr">
+       <div class="d-flex flex-wrap">
+        <% for(i = 0; i < item.dishes.length; i++) { %>
+           <div class="card" id="card" style="width: 15rem;">
                 <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2FsYWRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h3><%= c.dishes[i].food%></h3>
-                    <p><%= c.dishes[i].details%></p>
-                    <p><%= c.dishes[i].price%></p>      
-                </div>
-            </div>
-        <%}%>
-        
-         
+                    <h5 class="foods"><%= item.dishes[i].food%></h5>
+                    <p><%= item.dishes[i].details%></p>
+                    <h5 class="prices text-center"><%= item.dishes[i].price%></h5>
+                    <%- include('../partials/order_buttons') %>
+               </div>
+           </div>
+        <% } %>
+       </div>
     <% } %>
-    </ul>
-    <ul>
-    <% for(let c of hotdog) { %>
-        <li>
-           <h3><%= c.name %></h3>
-        </li>
-        <hr id="hr">
-        <% for(let i = 0; i < c.dishes.length; i++) {%>
-            <div class="card" id="card" style="width: 18rem;">
+    </div>
+    <div class="d-flex flex-column bd-highlight">
+    <% for(item of hotdog) { %>
+       <h3><%= item.name %></h3>
+       <hr id="hr">
+       <div class="d-flex flex-wrap">
+        <% for(i = 0; i < item.dishes.length; i++) { %>
+           <div class="card" id="card" style="width: 15rem;">
                 <img src="https://images.unsplash.com/photo-1613482084286-41f25b486fa2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhvdCUyMGRvZ3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h3><%= c.dishes[i].food%></h3>
-                    <p><%= c.dishes[i].details%></p>
-                    <p><%= c.dishes[i].price%></p>      
-                </div>
-            </div>
-        <%}%>
-         
+                    <h5 class="foods"><%= item.dishes[i].food%></h5>
+                    <p><%= item.dishes[i].details%></p>
+                    <h5 class="prices text-center"><%= item.dishes[i].price%></h5>
+                    <%- include('../partials/order_buttons') %>
+               </div>
+           </div>
+        <% } %>
+       </div>
     <% } %>
-    </ul>
-    <ul>
-    <% for(let c of burger) { %>
-        <li>
-           <h3><%= c.name %></h3>
-        </li>
-        <hr id="hr">
-        <% for(let i = 0; i < c.dishes.length; i++) {%>
-            <div class="card" id="card" style="width: 18rem;">
+    </div>
+    <div class="d-flex flex-column bd-highlight">
+    <% for(item of burger) { %>
+       <h3><%= item.name %></h3>
+       <hr id="hr">
+       <div class="d-flex flex-wrap">
+        <% for(i = 0; i < item.dishes.length; i++) { %>
+           <div class="card" id="card" style="width: 15rem;">
                 <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YnVyZ2Vyc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h3><%= c.dishes[i].food%></h3>
-                    <p><%= c.dishes[i].details%></p>
-                    <p><%= c.dishes[i].price%></p>      
-                </div>
-            </div>
-        <%}%>
-         
+                    <h5 class="foods"><%= item.dishes[i].food%></h5>
+                    <p><%= item.dishes[i].details%></p>
+                    <h5 class="prices text-center"><%= item.dishes[i].price%></h5>
+                    <%- include('../partials/order_buttons') %>
+               </div>
+           </div>
+        <% } %>
+       </div>
     <% } %>
-    </ul>
-    <ul>
-    <% for(let c of wrap) { %>
-        <li>
-           <h3><%= c.name %></h3>
-        </li>
-        <hr id="hr">
-        <% for(let i = 0; i < c.dishes.length; i++) {%>
-            <div class="card" id="card" style="width: 18rem;">
+    </div>
+
+    <div class="d-flex flex-column bd-highlight">
+    <% for(item of wrap) { %>
+       <h3><%= item.name %></h3>
+       <hr id="hr">
+       <div class="d-flex flex-wrap">
+        <% for(i = 0; i < item.dishes.length; i++) { %>
+           <div class="card" id="card" style="width: 15rem;">
                 <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d3JhcHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h3><%= c.dishes[i].food%></h3>
-                    <p><%= c.dishes[i].details%></p>
-                    <p><%= c.dishes[i].price%></p>      
-                </div>
-            </div>
-        <%}%>
-         
+                    <h5 class="foods"><%= item.dishes[i].food%></h5>
+                    <p><%= item.dishes[i].details%></p>
+                    <h5 class="prices text-center"><%= item.dishes[i].price%></h5>
+                    <%- include('../partials/order_buttons') %>
+               </div>
+           </div>
+        <% } %>
+       </div>
     <% } %>
-    </ul>
+    </div>
+
+  </div>
+  
+  <div class="p-2 flex-fill mt-2 bd-highlight">
+     
+    <h3>Order</h3>
+    <hr id="hr">
+     <table class="table">
+        <thead>
+            <tr>
+                <th>Food</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Net Price</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+     </table>
+    
+  </div>
 </div>

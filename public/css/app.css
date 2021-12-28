@@ -30,7 +30,7 @@ main {
 	background-color: #4e598c;
 }
 
-h3, #username, #password, #email, #role {
+h3, h5, #username, #password, #email, #role {
 	color: #ffffff;
 }
 
@@ -46,6 +46,10 @@ p {
 
 #hr {
 	border: 5px solid #ffffff;
+}
+
+th, td {
+	color: #ffffff;
 }
 
 #lgbtn, #rgbtn {
