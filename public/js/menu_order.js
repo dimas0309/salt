@@ -45,12 +45,14 @@ const order = () => {
             const quantity = button.previousElementSibling
                                 .value;
 			const food = button.parentNode
-			                   .previousElementSibling
-			                   .previousElementSibling
-                               .previousElementSibling
+			                   .parentNode
+			                   .children[0]
+                               .children[0]
 			                   .innerText
             const price = button.parentNode
-                                .previousElementSibling
+                                .parentNode
+                                .children[0]
+                                .children[1]
                                 .innerText                   
 			const netPrice = quantity * price;
 
@@ -63,11 +65,17 @@ const order = () => {
 
                 sum += parseInt(val);
             } 
-    
-            tfoot.children[0].children[3].innerText = sum;
-            tfoot.children[1].children[3].innerText = (0.18*sum).toFixed(2);
-            tfoot.children[2].children[3].innerText = sum + 0.18*sum;
 
+            const subtotal = tfoot.children[0].children[3];
+            const tax =  tfoot.children[1].children[3];
+            const total = tfoot.children[2].children[3];
+    
+            subtotal.innerText = sum;
+            tax.innerText = (0.18*sum).toFixed(2);
+            total.innerText = sum + 0.18*sum;
+
+            invoiceLine();
+            purchase();
 		})
 	}
 }
@@ -75,8 +83,8 @@ const order = () => {
 amountFormat();
 order();
 
-
-
+ 
+ 
 
 
 

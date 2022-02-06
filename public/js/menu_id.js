@@ -1,8 +1,9 @@
 
-const buttons = document.getElementsByClassName('btn btn-primary');
-const quitbtns = document.getElementsByClassName('btn btn-danger');
-const foods = document.getElementsByClassName('foods');
-const prices = document.getElementsByClassName('prices');
+const buttons = document.querySelectorAll('.btn-add');
+const foods = document.getElementsByClassName('food');
+const prices = document.getElementsByClassName('price');
+
+
  
 const foodid = () => {
 	for (let i = 0; i < foods.length; i++) {
@@ -22,16 +23,12 @@ const buttonid = () => {
 	}
 }
 
-const qbtnid = () => {
-	for (let i = 0; i < quitbtns.length; i++){
-		quitbtns[i].setAttribute('id','qbtn'+i);
-	}
-}
-
 foodid();
 priceid();
 buttonid();
-qbtnid();
+
+ 
+
 
 
  

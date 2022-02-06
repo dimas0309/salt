@@ -1,0 +1,49 @@
+
+<div class="d-flex justify-content-center mt-5">
+
+    <!-- collapse button -->
+    <a class="btn" data-bs-toggle="collapse" 
+        href="#collapseExample" role="button" aria-expanded="false" 
+        aria-controls="collapseExample">
+            order
+    </a>
+
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body " >
+            <h3 class="text-center">Order</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Food</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+            </table>
+        </div>
+        <br>
+        <form class="d-flex justify-content-center" action='/foods/menu' method="POST" novalidate>
+            <input type="text" id="food" name="food" hidden="true">
+            <p></p>
+            <input type="text" id="quantity" name="quantity" hidden="true">
+            <p></p>
+            <input type="text" id="price" name="price" hidden="true">
+            <p></p>
+            <input type="text" id="amount" name="amount" hidden="true">
+            <p></p>
+            <input type="number" id="subtotal" name="subtotal" hidden="true">
+            <p></p>
+            <input type="number" id="tax" name="tax" hidden="true">
+            <p></p>
+            <input type="number" id="total" name="total" hidden="true">
+            <p></p>
+            <button class="btn-pur">
+                Purchase
+            </button>
+        </form>
+    </div>
+</div>
+
